@@ -43,10 +43,9 @@ def get_notification(today, tomorrow, year):
         return "".join(message)
     return None
 
-def main():
+if __name__ == "__main__":
     today, year = time.strftime("%-d %B"), int(time.strftime("%Y"))
     tomorrow = (datetime.strptime(today, "%d %B") + timedelta(days=1)).strftime("%-d %B")
     message  = get_notification(today, tomorrow, year)
     print(message)
 
-main()
