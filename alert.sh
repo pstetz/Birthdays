@@ -5,3 +5,5 @@ if [ "$info" != "None" ]; then
     osascript -e "tell app \"Finder\" to display dialog \"$info\""
 fi
 
+# Organize birthday file
+python3 organize.py
