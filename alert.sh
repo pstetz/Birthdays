@@ -1,9 +1,10 @@
-info=`python3 check_today.py`
+info=`/anaconda3/bin/python3 ~/git/Birthdays/check_today.py`
 
 # check if info is not blank
 if [ "$info" != "None" ]; then
-    osascript -e "tell app \"Finder\" to display dialog \"$info\""
+	osascript -e "tell app \"Finder\" to display dialog \"$info\""
 fi
 
 # Organize birthday file
-python3 organize.py
+/anaconda3/bin/python3 ~/git/Birthdays/organize.py
+echo "Ran Birthdays script"

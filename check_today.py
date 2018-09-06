@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv("birthdays.csv")
+PATH = "/Users/pbezuhov/git/Birthdays/"
+df = pd.read_csv(PATH + "birthdays.csv")
 
 def get_birthdays(df, day, year):
     birthdays = df[df.birthday == day]
@@ -41,7 +42,7 @@ def get_notification(today, tomorrow, year):
 
     if len(birthdays_today) + len(birthdays_tomorrow) != 0:
         return "".join(message)
-    return None
+    return "None"
 
 if __name__ == "__main__":
     today, year = time.strftime("%-d %B"), int(time.strftime("%Y"))
